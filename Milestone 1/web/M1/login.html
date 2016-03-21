@@ -1,41 +1,34 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <html>
     <head>
-        <title>Login Giumbo e-commerce</title>
+        <title>SolePC e-commerce - Login</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="keywords" content="e-commerce, computer, tablet">
+        <meta name="description" content="Sito e-commerce società SolePC">
+        <meta name="author" content="Marco Lecis">
     </head>
     <body>
-        
-     
-               
-               <label for="login">Login</label>
-<input name="login" id="login" type="text"/>
+      <nav>
+<h3>Sezione di navigazione</h3>
+<a href="descrizione.html">Pagina descrizione</a>
 <br><br>
-<label for="password">password</label>
-<input name="password" id="password" type="text"/>
-<br>
-<input type="submit" value="login"/>
-            
-<br>
+<a href="cliente.html">Pagina cliente</a>
+<br><br>
+<a href="venditore.html">Pagina venditore</a>
+</nav>
+        <br>
+        <h2>Login al sito</h2>
+        <br>
+        <form action="login.asp" method="get">   
+        <label for="nome_utente"><em>Nome utente</em></label> <input type="text" name="nome_utente" id="nome_utente" value="Inserire il nome utente" maxlength="30"/>
+<br><br>
+<label for="pswd"><em>Password</em></label> <input type="password" name="pswd" id="pswd" maxlength="50"/>
+<br><br>
+<input type="submit" value="Login"/>
+        </form>
 
 
-<a href=”descrizione.html”>link alla pagina descrizione</a>
-<br>
-<a href=”cliente.html”>link alla pagina cliente</a>
-<br>
-<a href=”venditore.html”>link alla pagina venditore</a>
-
-
-
-
-            
-</form>
       
     </body>
 </html>
