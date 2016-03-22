@@ -19,21 +19,21 @@
             <h2> Inserisci un nuovo oggetto in vendita nel sito: </h2>
             <form action="login.asp" method="get">
                 
-            <label for="nome">Nome dell'oggetto</label>
+<label for="nome">Nome dell'oggetto</label>
 <input name="nome" id="nome" type="text" maxlength="50"/>
-<br><br>
+
 <label for="immagine">Url di un immagine</label>
-<input name="immagine" id="immagine" type="text"/>
-<br><br>
-<label for="descrizione">Descrizione</label>
-<input name="descrizione" id="descrizione" type="text" maxlength="80"/>
-<br><br>
+<input type="file" name="immagine">
+
+<label>Descrizione</label>
+<textarea name="descrizione" rows="4" cols="20" maxlength="200"></textarea>
+
 <label for="prezzo">Prezzo dell'oggetto</label>
 <input name="prezzo" id="prezzo" type="text" maxlength="20"/>
-<br><br>
+
 <label for="quant">Quantita disponibile</label>
 <input name="quant" id="quant" type="text" maxlength="40"/>
-<br><br>
+
 <input type="submit" value="Inserisci un nuovo oggetto"/>
 
             </form>
