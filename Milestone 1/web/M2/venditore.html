@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SolePC e-commerce - Venditore</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="keywords" content="e-commerce, computer, tablet">
+        <meta name="description" content="Sito e-commerce società SolePC">
+        <meta name="author" content="Marco Lecis">
+        <link href="style.css" rel="stylesheet" type="text/css" media="screen" />
+    </head>
+    <body>
+        <header>
+            <h1><em>ConvertiblePC</em> e-commerce</h1>
+            <h4>The best marketplace to buy a convertible</h4>
+        </header>
+            <nav><h3>Navigazione</h3>
+        <a href="descrizione.html">Home page</a>
+        <br><br>
+        <a href="login.html">Pagina di login</a>
+            </nav><br>
+            <div id="right"><h3>Link ai principali marchi:</h3>
+                <ul>
+            <li><a href="http://www8.hp.com/it/it/home.html">HP</a></li>             
+            <li><a href="https://www.microsoft.com/it-it/">Microsoft</a></li>
+            <li><a href="http://www.acer.com/ac/it/IT/content/home">Acer</a></li>
+            <li><a href="https://www.asus.com/it/">Asus</a></li>
+        </ul></div>
+       <div id="center">
+           
+            <h2> Inserisci un nuovo oggetto in vendita nel sito: </h2>
+            <form action="login.asp" method="get">
+      
+<label for="nome">Nome dell'oggetto</label>
+<input class="input" name="nome" id="nome" type="text" maxlength="50"/>
+
+<label for="immagine">Url di un immagine</label>
+<input type="file" name="immagine">
+
+<label>Descrizione</label>
+<textarea class="input" name="descrizione" rows="4" cols="19" maxlength="200"></textarea>
+
+<label for="prezzo">Prezzo dell'oggetto</label>
+<input class="input" name="prezzo" id="prezzo" type="text" maxlength="20"/>
+
+<label for="quant">Quantita disponibile</label>
+<input class="input" name="quant" id="quant" type="text" maxlength="40"/>
+
+<input type="submit" value="Inserisci un nuovo oggetto"/>
+        </div>
+            </form>
+            <footer>Contatti: convertiblepc@email.com</footer>
+        
+    </body>
+</html>

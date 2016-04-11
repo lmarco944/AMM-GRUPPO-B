@@ -1,0 +1,312 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 30-mar-2016, 16.54.05
+    Author     : Marco
+*/
+
+
+
+body {
+    position: relative;
+    background-image:  url('foto/bg.png');
+    background-repeat: repeat;
+    font-family: "Times new roman", Times, serif;
+}
+
+@media (min-width: 1280px)
+{
+    
+    body {
+       width: 900px;
+       margin-left: auto;
+       margin-right: auto;
+    }
+    
+    header {
+       background-image: url('foto/Chip.png');
+       margin-bottom: 10px;
+       height: 100px;
+       margin: 0px;
+       margin-bottom: 10px;
+       text-indent: 130px;
+    }
+    
+
+    #right {
+       position: absolute;
+       right: 0px;
+       margin-top: 5%;
+       margin-right:1%;
+    }
+
+    #content {
+        width: 400px;
+        padding-left: 200px;
+        padding-right: 300px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    
+    #center {
+        width: 200px;
+ margin-left: auto;
+ margin-right: auto;
+ padding-left: 350px;
+ padding-right: 350px;
+ background-color: white;
+    }
+
+    nav {
+        float: left;
+        margin-top: 6%;
+        margin-left:1%;
+    }
+    
+    footer {
+        padding-left: 35%;
+    }
+}
+
+
+@media (min-width: 480px) and (max-width: 1280px)
+{
+    body {
+        margin: auto;
+        margin-top: 1%;
+        margin-bottom: 1%;
+        width: 700px;
+    }
+    
+    header {
+        background-image: url('foto/Chip.png');
+        margin-bottom: 10px;
+        height: 100px;
+        margin: 0px;
+        margin-bottom: 10px;
+        text-indent: 130px;
+    }
+    
+
+    #right {
+        display: none;
+    }
+
+    #content {
+        width: 500px;
+        padding-left: 200px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    
+    #center {
+        width: 200px;
+ margin-left: auto;
+ margin-right: auto;
+ padding-left: 250px;
+ padding-right: 250px;
+ background-color: white;
+    }
+
+    nav {
+        float: left;
+        margin-top: 6%;
+        margin-left:1%;
+    }
+    
+    footer {
+        padding-left: 35%;
+    }
+}
+
+@media (max-width: 480px)
+{
+    
+    body {
+        margin: 1%;
+    }
+    
+    header {
+     background-image: url('foto/Chip-small.png');
+     text-indent: 25%;
+     height: 25%;
+    }
+
+    h1 {
+    font-size: 100%;
+}
+
+h2 {
+    font-size: 95%;
+}
+
+h3 {
+    font-size: 90%;
+}
+
+h4 {
+    font-size: 80%;
+}
+
+p {
+    font-size: 60%;
+    font-family: "Lucida Console", Geneva, sans-serif;
+}
+    
+    #right {
+        display: none;
+    }
+
+    #content {
+        width: 100%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+        
+    #center {
+        width: 100%;
+ margin-left: auto;
+ margin-right: auto;
+ background-color: white;
+    }
+
+    nav {
+        float: top;
+        width: 100%;
+        margin-bottom: 1%;
+    }
+    
+    footer {
+        padding-left: 10%;
+    }
+}
+
+
+header {
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: 1px solid;
+    padding-bottom: 1%;
+    color: darkgrey;
+}
+            
+#content {
+    background-color: white;
+}
+
+#right {
+    background-color: white;
+}
+
+nav {
+    background-color: white;
+}
+
+#img_home {
+    position: absolute;
+    top: auto;
+    bottom: auto;
+}
+
+footer {
+    background-image:  url('foto/bg_footer.png');
+    margin-top: 10px;
+    height: 30px;
+    padding-top: 1%;
+    border: 1px solid darkgrey;
+    color: black;
+    font-size:92%;
+}
+
+h1 {
+    color: #00002C;
+}
+
+h2 {
+    color: #000040;
+}
+
+h3 {
+    color: #00005A;
+}
+
+h4 {
+    color: #00009B;
+}
+
+p {
+    font-family: "Lucida Console", Geneva, sans-serif;
+}
+
+/* 
+    proprietà per i link
+*/
+
+a:link {
+    color: blueviolet;
+}
+
+a:visited {
+    color: #821E4B;
+}
+
+a:hover {
+    cursor: pointer;
+    font-weight: bold;
+    color: black;
+}
+
+table {
+        border-collapse: collapse;
+    }
+    
+th {
+    color: #DDDDDD;
+    font-family: "Verdana", times, sans-serif;
+    font-size: 80%;
+    border-style: solid;
+    border-width: 3%;
+    background-color: #000033;
+    width: 60%;
+}
+
+td {
+    color: black;
+    font-family: "Arial", times, sans-serif;
+    font-size: 70%;
+    border-style: solid;
+    border-width: 2%;
+    width: 60%;
+    }
+    
+    tr {
+        height: 80%;
+    }
+    
+    tr.pari {
+        background-color: lightcyan;
+    }
+    
+    tr.dispari {
+        background-color: aquamarine;
+    }
+    
+
+    
+label::after, label::before {
+        content: '\A';
+        white-space: pre;
+    }
+
+label, input, textarea { 
+    margin: 10px 0;
+}
+
+.input {
+    background: lightgrey;
+    border: 1px solid;
+}
+ 
