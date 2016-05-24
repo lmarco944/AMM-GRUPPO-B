@@ -1,0 +1,50 @@
+﻿ENTIT� E ATTRIBUTI:
+
+
+	VENDITORE
+		id_v (Chiave primaria)
+		nome	
+		cognome
+		username
+		password
+		indirizzo
+		residenza
+		cellulare
+		email
+		saldo
+
+	CLIENTE
+		id_c (Chiave primaria)
+		nome
+		cognome
+		username
+		password
+		indirizzo
+		residenza
+		cellulare
+		email
+		saldo
+
+	OGGETTO
+		id_o (Chiave primaria)
+		nome
+		descrizione
+		prezzo
+		quantita
+		foto
+		id_v (Chiave esterna)
+
+	ACQUISTO
+		id_a (Chiave primaria)
+		id_compratore (Chiave esterna)
+	
+
+RELAZIONI:
+			  vende
+	VENDITORE  N-------------------N OGGETTO
+
+			  
+	CLIENTI    N----N ACQUISTO N----N OGGETTO
+
+
+

@@ -1,0 +1,14 @@
+Tue May 24 10:11:59 CEST 2016 : Apache Derby Server di rete: 10.8.3.2 - (1557835) avviato e pronto ad accettare connessioni sulla porta 1527
+----------------------------------------------------------------
+Tue May 24 10:34:12 CEST 2016:
+Avvio della versione di Derby The Apache Software Foundation - Apache Derby - 10.8.3.2 - (1557835): istanza a816c00e-0154-e1d2-0a6d-000005e98349
+su directory database D:\OneDrive\AMM\AMM-GRUPPO-B\M1\web\WEB-INF\db\ammdb  con caricatore classi sun.misc.Launcher$AppClassLoader@46aea8cf 
+
+java.vendor=Oracle Corporation
+java.runtime.version=1.7.0_80-b15
+user.dir=C:\Program Files\Java\jdk1.7.0_80\db
+os.name=Windows 7
+os.arch=amd64
+os.version=6.1
+derby.system.home=D:\OneDrive\AMM\AMM-GRUPPO-B\M1\web\WEB-INF\db
+Programma di caricamento classe database avviato - derby.database.classpath=''
