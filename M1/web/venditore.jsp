@@ -30,7 +30,7 @@
                 <input type="file" name="immagine">
 
                 <label>Descrizione</label>
-                <textarea class="input" name="descrizione" rows="4" cols="19" maxlength="200"></textarea>
+                <textarea class="input" name="descrizione" rows="4" cols="18" maxlength="200"></textarea>
 
                 <label for="prezzo">Prezzo dell'oggetto</label>
                 <input class="input" name="prezzo" id="prezzo" type="text" maxlength="20"/>

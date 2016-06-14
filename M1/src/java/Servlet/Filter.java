@@ -5,30 +5,23 @@
  */
 package Servlet;
 
+import Model.Oggetto;
 import Model.UtentiFactory;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import javax.servlet.RequestDispatcher;
+import java.util.ArrayList;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 /**
  *
  * @author Marco
  */
-@WebServlet(name = "Vendita", urlPatterns = {"/Vendita"})
-public class Vendita extends HttpServlet {
+@WebServlet(name = "Filter", urlPatterns = {"/Filter.json"})
+public class Filter extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -39,41 +32,31 @@ public class Vendita extends HttpServlet {
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
-    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
+protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-HttpSession session = request.getSession();
-response.setContentType("text/html;charset=UTF-8");
-
-                int id_v = Integer.parseInt(request.getParameter("venditoreId"));
-                request.setAttribute("venditore", UtentiFactory.getInstance().getVenditore(id_v));
-                request.setAttribute("venditore", UtentiFactory.getInstance().getVenditore((int)session.getAttribute("id_v")));
-
-
-
-        // Inserimento nuovo oggetto in vendita (solo se il venditore ha premuto il tasto 'submit')
-        if(request.getParameter("submit") != null)
+                // Controlla se è stato inviato un commando
+        
+        String command = request.getParameter("key");
+        if (command != null) 
         {
-       
-            // Preleva i dati da inserire
-            int id_venditore = Integer.parseInt(request.getParameter("venditoreId"));
-            int id_o = Integer.parseInt(request.getParameter("id_o"));
-            String nome = request.getParameter("nome");
-            String descrizione = request.getParameter("descrizione");
-            Double prezzo = Double.parseDouble(request.getParameter("prezzo"));
-            int quantita = Integer.parseInt(request.getParameter("quantita"));
-
-            
-            try
+            // Verifica che commando e id siano stati impostati
+            if (command.equals("search")) 
             {
-                UtentiFactory.getInstance().venditaOggetto(id_venditore, id_o, nome, descrizione, prezzo, quantita);
+                
+                
+                // Esegue la ricerca
+                ArrayList<Oggetto> listaOgg = UtentiFactory.getInstance().getOggettiRicerca(request.getParameter("q"));
+                // Imposto la lista come attributo della request
+                request.setAttribute("listaOgg", listaOgg);
+
+                response.setContentType("application/json");
+                response.setHeader("Expires", "Sat, 6 May 1995 12:00:00 GMT");
+                response.setHeader("Cache-Control", "no-store, no-cache, "
+                        + "must-revalidate");
+                // Genero il json con una jsp
+                request.getRequestDispatcher("filterJson.jsp").forward(request, response);
             }
-            
-            catch(SQLException e) {}
-            request.setAttribute("avviso", "Oggetto aggiunto correttamente"); 
-        } 
-        
-        
-        request.getRequestDispatcher("venditore_login.jsp").forward(request, response);
+        }
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

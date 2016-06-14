@@ -20,6 +20,18 @@ public class Oggetto {
     protected int id_venditore;
  
     
+    //Costruttore
+    public Oggetto(){
+    id_o = 0;
+    nome ="";
+    descrizione = "";
+    prezzo = 0.00;
+    quantita = 0;
+    foto = "";
+    id_venditore = 0;
+    }
+    
+    
         /**
      * @return the id_o
      */
@@ -52,7 +64,7 @@ public class Oggetto {
     /**
      * @return the descrizione
      */
-    public String getdescrizione() {
+    public String getDescrizione() {
         return descrizione;
     }
 
@@ -73,14 +85,14 @@ public class Oggetto {
     /**
      * @param prezzo the prezzo to set
      */
-    public void setPrezzo(Double prezzo) {
+    public void setPrezzo(double prezzo) {
         this.prezzo = prezzo;
     }
     
     /**
      * @return the quantita
      */
-    public int getquantita() {
+    public int getQuantita() {
         return quantita;
     }
 
@@ -94,7 +106,7 @@ public class Oggetto {
     /**
      * @return the foto
      */
-    public String getfoto() {
+    public String getFoto() {
         return foto;
     }
 

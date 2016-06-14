@@ -7,13 +7,15 @@ package Model;
 
 import java.util.ArrayList;
 
+
+
 /**
  *
  * @author Marco
  */
 public class Cliente extends Utente {
     
-    protected ArrayList<Oggetto> listaOggetti = new ArrayList<Oggetto>(); 
+   protected ArrayList<Oggetto> listaOggetti = new ArrayList<Oggetto>(); 
     
     
 public Cliente()
@@ -21,7 +23,8 @@ public Cliente()
     super();
 }
 
-    /**
+        
+        /**
      * @return the listaOggetti
      */
     public ArrayList<Oggetto> getListaOggetti() {
@@ -34,6 +37,7 @@ public Cliente()
     public void setListaOggetti(ArrayList<Oggetto> listaOggetti) {
         this.listaOggetti = listaOggetti;
     }
+
 
     
 }

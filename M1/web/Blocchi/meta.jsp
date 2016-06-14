@@ -9,4 +9,4 @@
         <meta name="keywords" content="e-commerce, computer, tablet">
         <meta name="description" content="Sito e-commerce società SolePC">
         <meta name="author" content="Marco Lecis">
-        <link href="style.css" rel="stylesheet" type="text/css" media="screen" />
+        <link href="style.css" rel="stylesheet" type="text/css" media="screen"/>
