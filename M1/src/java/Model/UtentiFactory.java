@@ -551,7 +551,7 @@ public class UtentiFactory {
     
     
     //TASK 5: vendita di un nuovo oggetto
-    public void venditaOggetto(int id_venditore, int id_o, String nome, String descrizione, Double prezzo, int quantita) throws SQLException 
+    public void InserisciOggetto(int id_venditore, int id_o, String nome, String descrizione, Double prezzo, int quantita) throws SQLException 
     {
         Connection conn = DriverManager.getConnection(connectionString,"lmarco94","0000");
         PreparedStatement newOggetto= null;
@@ -595,6 +595,51 @@ public class UtentiFactory {
         }
     
     
+    }
+    
+    public void AggiornaOggetto(String nome, Double prezzo, int quantita) {
+        try {  
+            Connection conn = DriverManager.getConnection(connectionString, "lmarco94", "0000");
+            String query = "update Oggetto set nome = ?, prezzo = ?, quantita = ?, descrizione = ?, where id_o = " + Oggetto.getId_o();
+            PreparedStatement stmt = conn.prepareStatement(query);
+            
+            stmt.setString(1, Oggetto.getNome());
+            stmt.setDouble(2, Oggetto.getPrezzo());
+            stmt.setInt(3, Oggetto.getQuantita());        
+            stmt.setString(4, Oggetto.getDescrizione());
+       
+            int r1 = stmt.executeUpdate();
+        
+            if (r1 == 1){
+                System.out.println("\nOggetto aggiornato\n");
+            }
+            
+            stmt.close();
+            conn.close();
+        } 
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+    } 
+    
+    public void CancellaOggetto(int id) {
+        try {  
+            Connection conn = DriverManager.getConnection(connectionString, "lmarco94", "0000");
+            String query = "delete from Oggetto where id_o = " + id;
+            PreparedStatement stmt = conn.prepareStatement(query);
+       
+            int r1 = stmt.executeUpdate();
+        
+            if (r1 == 1){
+                System.out.println("\nOggetto cancellato\n");
+            }
+            
+            stmt.close();
+            conn.close();
+        } 
+        catch (Exception e) {
+            e.printStackTrace();
+        }
     }
     
         // TASK 6: compravendita di un oggetto

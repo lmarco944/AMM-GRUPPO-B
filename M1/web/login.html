@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ConvertiblePC - Login</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="keywords" content="e-commerce, computer, tablet">
+        <meta name="description" content="Sito e-commerce società SolePC">
+        <meta name="author" content="Marco Lecis">
+        <link href="style.css" rel="stylesheet" type="text/css" media="screen"/>
+    </head>
+    <body>
+        <header>
+            <h1><em>ConvertiblePC</em> e-commerce</h1>
+            <h4>The best marketplace to buy a convertible</h4>
+        </header>
+        <nav>
+            <h3 id="nav_titolo">Navigazione</h3>
+            <a href="descrizione.jsp">Home page</a><br>
+            <a href="cliente.jsp">Pagina cliente</a><br>
+            <a href="venditore.jsp">Pagina venditore</a>
+            </nav>
+        <div id="right"><h3>Link ai principali marchi:</h3>
+          <ul>
+            <li><a href="http://www8.hp.com/it/it/home.html">HP</a></li>             
+            <li><a href="https://www.microsoft.com/it-it/">Microsoft</a></li>
+            <li><a href="http://www.acer.com/ac/it/IT/content/home">Acer</a></li>
+            <li><a href="https://www.asus.com/it/">Asus</a></li>
+          </ul>
+        </div>
+<div id="center">
+        
+            <h2>Login al sito</h2>
+    
+    <form method="post" action="Login">
+    <input type="hidden" value="login">
+        <p>
+            <label for="nome_utente"><em>Nome utente</em></label>
+            <input type="text" name="Username" id="nome_utente" value="Inserire il nome utente" maxlength="30"/>
+        </p>
+        <p>
+            <label for="password"><em>Password</em></label><input type="password" name="Password" id="password" maxlength="50"/>
+            <input type="submit" name="login" value="Login">˙
+        </p>
+    </form>
+</div>
+<footer>Contatti: convertiblepc@email.com</footer>
+    </body>
+</html>
