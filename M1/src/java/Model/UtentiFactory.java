@@ -577,8 +577,7 @@ public class UtentiFactory {
             
             if(r1 != 1)
                 conn.rollback();
-            
-            conn.commit(); 
+                conn.commit(); 
         }
         catch(SQLException e){
             try {conn.rollback();}
